@@ -1,6 +1,6 @@
+# Fahrzeugverleih Script für FiveM
 [DE]
 
-Fahrzeugverleih Script für FiveM
 Ein einfaches Fahrzeugverleih-System für FiveM ESX, das es Spielern ermöglicht, Fahrzeuge zu mieten und zurückzugeben. Das Script verwendet ESX für die Integration von Spielereigenschaften und -aktionen.
 
 Funktionen
@@ -14,7 +14,8 @@ Ressource hinzufügen:
 Kopiere den Ordner rentacar_ox in das Verzeichnis resources deines FiveM-Servers.
 
 Füge in deiner server.cfg-Datei die Zeile start rentacar_ox hinzu.
-Abhängigkeiten:
+
+## Abhängigkeiten:
 ESX Framework Legacy 1.8.0 oder Höher!
 OX_Lib
 OX_Target
@@ -33,8 +34,11 @@ Lizenz
 Dieses Script ist Open Source und darf frei verwendet und modifiziert werden. Bitte gib die ursprünglichen Autoren und den ursprünglichen Code an, wenn du Änderungen vornimmst.
 
 
+
+# Vehicle Rental Script for FiveM 
 [EN]
-Vehicle Rental Script for FiveM A simple vehicle rental system for FiveM ESX that allows players to rent and return vehicles. This script integrates with ESX for player properties and actions.
+
+A simple vehicle rental system for FiveM ESX that allows players to rent and return vehicles. This script integrates with ESX for player properties and actions.
 
 Features
 Rent a Vehicle: Players can select a vehicle and rent it for a specified duration.
@@ -46,8 +50,8 @@ Add the Resource:
 
 Copy the rentacar_ox folder into the resources directory of your FiveM server.
 Add start rentacar_ox to your server.cfg file.
-Dependencies:
 
+## Dependencies:
 ESX Framework Legacy 1.8.0 or higher
 OX_Lib
 OX_Target
@@ -64,12 +68,12 @@ Missing Resources: Check that all required resources are activated in the server
 License
 This script is open source and may be freely used and modified. Please credit the original authors and code if you make changes.
 
+
+
+
+## Screenshots
 ![image](https://github.com/user-attachments/assets/53e37852-aeb2-48cd-aa0d-193b7d8fb1ca)
 ![image](https://github.com/user-attachments/assets/2e5eb0c7-e0d4-4e29-898a-c6dca4576957)
 ![image](https://github.com/user-attachments/assets/2e7333ac-3451-42dd-a8dc-e3d39f9c9fed)
 ![image](https://github.com/user-attachments/assets/18fc2323-4911-4ec8-9835-797ee765cfa4)
 ![image](https://github.com/user-attachments/assets/6ade370a-8d21-4042-b350-c2c1ac6e74ff)
-
-
-
-
