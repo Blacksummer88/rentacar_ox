@@ -115,20 +115,6 @@ Config.VehicleRental = {
             gears = 1,
         }
     },
-    {
-        model = "serv_electricscooter",
-        price = 350,
-        label = "E-Scooter",
-        class = "bikes",
-        description = 'Wähle Zeit und Preis',
-        image = 'https://cdn.discordapp.com/attachments/1249289876906578031/1296513760042680373/image.png?ex=67129008&is=67113e88&hm=17a5fc40cf9067b5e3e494fc6777453a00c601be9bf33bce045bd30782c10deb&',
-        metadata = {
-            acceleration = 0.28,
-            drag = 9.5,
-            maxSpeed = 151,
-            gears = 5,
-        }
-    },
 
     --Type car
     {
@@ -274,6 +260,8 @@ Config.Locales = {
         rent_vehicle = "Fahrzeug mieten",
         return_vehicle = "Fahrzeug zurückgeben",
         remaining_rental_duration = "Mietdauer verbleibend ",
+        bank = "Bank",
+        cash = "Bar",
 
         -- Metadata Label
         acceleration = "Beschleunigung",
@@ -310,6 +298,8 @@ Config.Locales = {
         rent_vehicle = "Rent vehicle",
         return_vehicle = "Return vehicle",
         remaining_rental_duration = "Remaining rental duration ",
+        bank = "Bank",
+        cash = "Cash",
 
         --Metadata Label
         acceleration = "Acceleration",

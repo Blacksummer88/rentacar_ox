@@ -55,13 +55,14 @@ local function updateMietTimer()
         end
     end)
 end
-local function zahlungDurchfuehren(preis, callback)
+
+local function processPayment(preis, callback)
     local player = ESX.GetPlayerData()
     local zahlungsmethode = nil
 
     local options = {
         {
-            title = "Bank",
+            title = Config.Locales[Config.Locale].bank,
             description = Config.Locales[Config.Locale].pay_with_bank,
             icon = 'fa-solid fa-university',
             onSelect = function()
@@ -77,7 +78,7 @@ local function zahlungDurchfuehren(preis, callback)
             end
         },
         {
-            title = "Bar",
+            title = Config.Locales[Config.Locale].cash,
             description = Config.Locales[Config.Locale].pay_with_cash,
             icon = 'fa-solid fa-money-bill',
             onSelect = function()
@@ -102,8 +103,8 @@ local function zahlungDurchfuehren(preis, callback)
     lib.showContext('payment_methods_menu')
 end
 
-local function mietFahrzeug(preis)
-    zahlungDurchfuehren(preis)
+local function rentVehicle(preis)
+    processPayment(preis)
 end
 RegisterNetEvent('rentacar:starteMiete', function(data)
     if isRented then
@@ -117,12 +118,12 @@ RegisterNetEvent('rentacar:starteMiete', function(data)
 
     local preis = fahrzeug.price * data.time.multiplier 
 
-    zahlungDurchfuehren(preis, function(success)
+    processPayment(preis, function(success)
         if success then 
             if not location or not location.class then
-                ESX.ShowNotification("Fehler: location oder Fahrzeugklasse fehlen.")
-                print("location-Daten: ", json.encode(location))
-                print("Debug: Fahrzeug-Klasse: " .. fahrzeug.class)
+                ESX.ShowNotification("Error: location oder Vehicle class missing.")
+                print("location Data: ", json.encode(location))
+                print("Debug: Vehicle class: " .. fahrzeug.class)
                 return
             end
 
@@ -243,13 +244,13 @@ RegisterNetEvent('rentacar:rentVehicle', function(data)
     local mietOption = {}
 
     if location.class == nil then
-        print("Fehler: location.class ist nil!")
+        print("Error: location.class ist nil!")
         print("Debug: location class: ", json.encode(location.class))
     end
 
     if fahrzeug.class == nil then
-        print("Fehler: fahrzeug.class ist nil!")
-        print("Debug: Fahrzeug class: ", json.encode(fahrzeug.class))
+        print("Error: Vehicle.class ist nil!")
+        print("Debug: Vehicle class: ", json.encode(fahrzeug.class))
     end
 
     for _, time in ipairs(Config.RentalTimes) do
@@ -273,7 +274,7 @@ RegisterNetEvent('rentacar:rentVehicle', function(data)
     lib.showContext('rental_menu')
 end)
 
-local function erstelleVerleihPeds()
+local function createRentalPeds()
     for _, location in ipairs(Config.Locations) do
         RequestModel(location.pedModel)
         while not HasModelLoaded(location.pedModel) do
@@ -292,7 +293,7 @@ local function erstelleVerleihPeds()
             debug = false,
             options = {
                 {
-                    name = "Mieten",
+                    name = "Rent",
                     type = "client",
                     label = Config.Locales[Config.Locale].rent_vehicle,
                     icon = 'fa-solid fa-box',
@@ -300,7 +301,7 @@ local function erstelleVerleihPeds()
                     location = location, --dont touch this
                 },
                 {
-                    name = "Rückgabe",
+                    name = "Return",
                     type = "client",
                     label = Config.Locales[Config.Locale].return_vehicle,
                     icon = "fa-solid fa-undo",
@@ -313,6 +314,6 @@ local function erstelleVerleihPeds()
 end
 
 Citizen.CreateThread(function()
-    erstelleVerleihPeds()
+    createRentalPeds()
     CreateBlips()
 end)
