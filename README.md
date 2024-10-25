@@ -15,11 +15,6 @@ Kopiere den Ordner rentacar_ox in das Verzeichnis resources deines FiveM-Servers
 
 Füge in deiner server.cfg-Datei die Zeile start rentacar_ox hinzu.
 
-## Abhängigkeiten:
-ESX Framework Legacy 1.8.0 oder Höher!
-OX_Lib
-OX_Target
-
 Konfiguration
 Die Konfiguration des Scripts erfolgt in der config.lua-Datei. Hier kannst du die Preise, Mietzeiten und Lokalisierungen und mehr anpassen.
 
@@ -32,6 +27,13 @@ Zahlungsprobleme: Stelle sicher, dass der Spieler über genügend Geld (Bar oder
 Fehlende Ressourcen: Überprüfe, ob alle benötigten Ressourcen in der server.cfg aktiviert sind.
 Lizenz
 Dieses Script ist Open Source und darf frei verwendet und modifiziert werden. Bitte gib die ursprünglichen Autoren und den ursprünglichen Code an, wenn du Änderungen vornimmst.
+
+
+## Abhängigkeiten:
+ESX Framework Legacy 1.8.0 oder Höher!
+OX_Lib
+OX_Target
+
 
 
 
@@ -51,13 +53,6 @@ Add the Resource:
 Copy the rentacar_ox folder into the resources directory of your FiveM server.
 Add start rentacar_ox to your server.cfg file.
 
-## Dependencies:
-ESX Framework Legacy 1.8.0 or higher
-OX_Lib
-OX_Target
-Configuration
-Configure the script in the config.lua file. Here, you can customize prices, rental durations, localizations, and more.
-
 Usage
 To rent a vehicle, use OX_target to look at the rental ped and select the option in the vehicle rental menu.
 Choose the rental duration and payment method.
@@ -67,6 +62,14 @@ Payment Issues: Ensure the player has sufficient funds (cash or bank) to cover t
 Missing Resources: Check that all required resources are activated in the server.cfg.
 License
 This script is open source and may be freely used and modified. Please credit the original authors and code if you make changes.
+
+Configuration
+Configure the script in the config.lua file. Here, you can customize prices, rental durations, localizations, and more.
+
+## Dependencies:
+ESX Framework Legacy 1.8.0 or higher
+OX_Lib
+OX_Target
 
 
 
